@@ -31,7 +31,11 @@
         "grunt": "~0.4.5"
     },
     "keywords": [
-        "gruntplugin"
+        "gruntplugin",
+        "profanity",
+        "javascript",
+        "css",
+        "static analysis"
     ],
     "dependencies": {
         "solemn-css": "^1.0.2",
