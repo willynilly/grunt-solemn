@@ -68,7 +68,6 @@ module.exports = function(grunt) {
     });
 
     function getViolationsForFile(fileType, filepath) {
-        var file = grunt.file.read(filepath);
         var violations = [];
         if (fileType === 'css') {
             violations = getViolationsForCSSFile(filepath);
@@ -79,16 +78,18 @@ module.exports = function(grunt) {
     }
 
     function getViolationsForCSSFile(filepath) {
-        var codeTexts = solemncss.parseCodeTexts(filepath);
-        codeTexts = solemncss.detectProfanity(codeTexts);
-        var violations = solemncss.getProfanityViolations(filepath, codeTexts);
+        var violations = solemncss.detect(filepath);
+        violations = violations.map(function(v) {
+            return solemncss.formatViolation(v);
+        });
         return violations;
     }
 
     function getViolationsForJSFile(filepath) {
-        var codeTexts = solemnjs.parseCodeTexts(filepath);
-        codeTexts = solemnjs.detectProfanity(codeTexts);
-        var violations = solemnjs.getProfanityViolations(filepath, codeTexts);
+        var violations = solemnjs.detect(filepath);
+        violations = violations.map(function(v) {
+            return solemnjs.formatViolation(v);
+        });
         return violations;
     }
 
