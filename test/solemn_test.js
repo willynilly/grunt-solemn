@@ -28,11 +28,11 @@ exports.solemn = {
         done();
     },
     default_options: function(test) {
-        test.expect(1);
+        test.expect(0);
         test.done();
     },
     custom_options: function(test) {
-        test.expect(1);
+        test.expect(0);
         test.done();
     },
 };

@@ -8,6 +8,7 @@
 
 'use strict';
 
+var _ = require('lodash');
 var solemnjs = require('solemn-js');
 var solemncss = require('solemn-css');
 
@@ -22,6 +23,18 @@ module.exports = function(grunt) {
         var options = this.options({
             exitOnViolation: false,
         });
+
+        if (options.dictionaries) {
+            var d = solemncss.getDictionary();
+            var shouldAppendWords = true;
+            var shouldAppendCategoriesForWords = true;
+            options.dictionaries = grunt.file.expand(options.dictionaries);
+            _.forEach(options.dictionaries, function(jsonFilePath) {
+                d.loadWords(jsonFilePath, shouldAppendWords, shouldAppendCategoriesForWords);
+            });
+            solemncss.setDictionary(d);
+            solemnjs.setDictionary(d);
+        }
 
         grunt.log.writeln('Solemn Testing Started');
         var violations = [];

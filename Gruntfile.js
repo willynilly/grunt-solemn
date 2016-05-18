@@ -35,11 +35,12 @@ module.exports = function(grunt) {
                 files: {
                     'css': ['test/fixtures/*.css'],
                     'js': ['test/fixtures/*.js']
-                }
+                },
             },
             custom_options: {
                 options: {
-                    exitOnViolation: true,
+                    exitOnViolation: false,
+                    dictionaries: ['test/fixtures/dictionary*.json']
                 },
                 files: {
                     'css': ['test/fixtures/test.css'],

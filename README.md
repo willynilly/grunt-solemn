@@ -37,11 +37,30 @@ grunt.initConfig({
 
 ### Options
 
+#### options.dictionaries
+Type: `array`
+Default value: `[]`
+
+An array value that includes a list of paths for custom dictionaries.  Each dictionary is a JSON file with the following format:
+
+```js
+{
+  "word1": ["category1", "category3"],
+  "word2": ["category2"],
+  "word3": ["category1"]
+  "word4": ["category2", "category3", "category4"]
+}
+```
+
+Every word must have at least one category.  If multiple dictionaries are specified, words and their categories are merged.  
+
 #### options.exitOnViolation
 Type: `Boolean`
 Default value: `false`
 
 A boolean value that is used to determine if grunt should exit if it finds a violation.
+
+
 
 ### Usage Examples
 
@@ -66,6 +85,7 @@ grunt.initConfig({
   solemn: {
     options: {
       exitOnViolation: true,
+      dictionaries: ['dictionary1.json', 'dictionary2.json']
     },
     files: {
       'css': ['styles/*.css'],
