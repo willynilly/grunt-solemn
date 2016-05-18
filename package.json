@@ -1,47 +1,45 @@
 {
-  "name": "grunt-solemn",
-  "description": "A grunt task for detecting inappropriate language in your code.",
-  "version": "1.1.0",
-  "homepage": "https://github.com/willynilly/grunt-solemn",
-  "author": {
-    "name": "Will Riley",
-    "email": "wanderingwill@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/willynilly/grunt-solemn.git"
-  },
-  "bugs": {
-    "url": "https://github.com/willynilly/grunt-solemn/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/willynilly/grunt-solemn/blob/master/LICENSE-MIT"
+    "name": "grunt-solemn",
+    "description": "A grunt task for detecting inappropriate language in your code.",
+    "version": "1.2.0",
+    "homepage": "https://github.com/willynilly/grunt-solemn",
+    "author": {
+        "name": "Will Riley",
+        "email": "wanderingwill@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/willynilly/grunt-solemn.git"
+    },
+    "bugs": {
+        "url": "https://github.com/willynilly/grunt-solemn/issues"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/willynilly/grunt-solemn/blob/master/LICENSE-MIT"
+    }],
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "scripts": {
+        "test": "grunt test"
+    },
+    "devDependencies": {
+        "grunt-contrib-jshint": "^0.9.2",
+        "grunt-contrib-clean": "^0.5.0",
+        "grunt-contrib-nodeunit": "^0.3.3",
+        "grunt": "~0.4.5"
+    },
+    "keywords": [
+        "gruntplugin",
+        "profanity",
+        "javascript",
+        "css",
+        "static analysis"
+    ],
+    "dependencies": {
+        "lodash": "^4.12.0",
+        "solemn-css": "^1.1.1",
+        "solemn-js": "^1.1.1"
     }
-  ],
-  "engines": {
-    "node": ">= 0.8.0"
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "devDependencies": {
-    "grunt-contrib-jshint": "^0.9.2",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-nodeunit": "^0.3.3",
-    "grunt": "~0.4.5"
-  },
-  "keywords": [
-    "gruntplugin",
-    "profanity",
-    "javascript",
-    "css",
-    "static analysis"
-  ],
-  "dependencies": {
-    "lodash": "^4.12.0",
-    "solemn-css": "^1.1.1",
-    "solemn-js": "^1.1.1"
-  }
 }
