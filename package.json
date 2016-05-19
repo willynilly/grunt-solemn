@@ -1,7 +1,7 @@
 {
     "name": "grunt-solemn",
     "description": "A grunt task for detecting inappropriate language in your code.",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "homepage": "https://github.com/willynilly/grunt-solemn",
     "author": {
         "name": "Will Riley",
@@ -39,7 +39,7 @@
     ],
     "dependencies": {
         "lodash": "^4.12.0",
-        "solemn-css": "^1.1.1",
-        "solemn-js": "^1.1.1"
+        "solemn-css": "^1.2.0",
+        "solemn-js": "^1.2.0"
     }
 }

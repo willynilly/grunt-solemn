@@ -9,8 +9,11 @@
 'use strict';
 
 var _ = require('lodash');
-var solemnjs = require('solemn-js');
-var solemncss = require('solemn-css');
+var SolemnJS = require('solemn-js');
+var SolemnCSS = require('solemn-css');
+
+var solemnjs = new SolemnJS();
+var solemncss = new SolemnCSS();
 
 module.exports = function(grunt) {
 
